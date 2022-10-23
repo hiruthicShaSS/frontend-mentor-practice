@@ -88,8 +88,10 @@ body {
     cursor: pointer;
 }
 
-.card .card-content button i {
+.card .card-content button span {
     margin-right: 10px;
+    vertical-align: middle;
+    font-size: 22px;
 }
 
 @media only screen and (max-width: 375px) {
