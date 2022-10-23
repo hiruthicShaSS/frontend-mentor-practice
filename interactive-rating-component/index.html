@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Rating Component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="card active" id="rating-card">
+    <div class="favorite">
+      <img src="images/icon-star.svg" alt="Star icon">
+    </div>
+
+    <div class="rating-content">
+      <h3 class="rating-title">How did we do?</h3>
+      <p class="rating-body">Please let us know how we did with your support request. All feedback is appreciated to
+        help us improve our offering!</p>
+
+      <div class="rating-container">
+        <div class="rate" id="rate-1">1</div>
+        <div class="rate" id="rate-2">2</div>
+        <div class="rate" id="rate-3">3</div>
+        <div class="rate" id="rate-4">4</div>
+        <div class="rate" id="rate-5">5</div>
+      </div>
+
+      <button id="submit">SUBMIT</button>
+    </div>
+  </div>
+
+  <div class="card thankyou" id="thankyou-card" style="display: none;">
+    <img src="./images/illustration-thank-you.svg" alt="Thank you image" width="130px" height="80px">
+    <div class="rating">You selected <span id="rating"></span> out of 5</div>
+    <h4>Thank you!</h4>
+    <p>We appreciate you taking the time to give a rating. If you ever need more support, dont hesitate to get in touch!
+    </p>
+  </div>
+
+  <script>
+    let ratings = Array.from(document.getElementsByClassName("rate"));
+
+    for (let i = 0; i < ratings.length; i++) {
+      ratings[i].addEventListener("click", (e) => {
+        let selectedRating = Array.from(document.querySelectorAll(".rate.selected"));
+
+        for (let j = 0; j < selectedRating.length; j++) {
+          selectedRating[j].classList.toggle("selected");
+        }
+
+        ratings[i].classList.toggle("selected");
+      });
+    }
+
+    document.getElementById("submit").addEventListener("click", (_) => {
+      let selectedRating = Array.from(document.querySelectorAll(".rate.selected"));
+
+      if (selectedRating.length > 0) {
+        document.getElementById("rating").innerText = selectedRating[0].innerText;
+        document.getElementById("rating-card").style.display = "none";
+        document.getElementById("thankyou-card").style.display = "block";
+      }
+    });
+  </script>
+</body>
+
+</html>

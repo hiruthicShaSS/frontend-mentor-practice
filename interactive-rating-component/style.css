@@ -1,0 +1,111 @@
+:root {
+    --orange: #fb7413;
+    --white: #ffffff;
+    --light-grey: #959eac;
+    --medium-grey: #7c8798;
+    --dark-blue: #435162;
+    --very-dark-blue: #121417;
+    --not-sure-what-color: #37424f;
+}
+
+html {
+    font-family: "Overpass", sans-serif;
+    font-size: 15px;
+    color: var(--white);
+    background-color: var(--very-dark-blue);
+}
+
+.card {
+    background-color: var(--dark-blue);
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 25% auto;
+}
+
+.favorite {
+    width: 30px;
+    height: 30px;
+    background-color: var(--not-sure-what-color);
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-body {
+    color: var(--light-grey);
+}
+
+.rating-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rate {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    color: var(--medium-grey);
+    background-color: var(--not-sure-what-color);
+    font-weight: 700;
+    text-align: center;
+    line-height: 32px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.rate:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    transition: 0.2s;
+}
+
+.rate.selected {
+    background-color: var(--orange);
+    color: var(--white);
+    transition: 0.2s;
+}
+
+.card .rating-content button {
+    background-color: var(--orange);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 12px;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    height: 30px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.card .rating-content button:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    transition: 0.4s;
+}
+
+.thankyou {
+    text-align: center;
+}
+
+.thankyou .rating {
+    color: var(--orange);
+    background-color: var(--not-sure-what-color);
+    border-radius: 20px;
+    width: fit-content;
+    padding: 0 15px;
+    font-size: 12px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    margin: 15px auto;
+}
+
+.thankyou p {
+    color: var(--light-grey);
+}
