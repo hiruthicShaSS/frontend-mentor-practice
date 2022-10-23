@@ -1,0 +1,107 @@
+p,
+h5 {
+    margin: 0;
+}
+
+:root {
+    --dark-cyan: #3c8067;
+    --cream: #f2ebe3;
+    --very-dark-blue: #1c232b;
+    --dark-grayish-blue: #6c7289;
+    --white: #ffffff;
+}
+
+html {
+    margin: 0;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: var(--cream);
+}
+
+.card {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 8px;
+    height: 400px;
+    width: 500px;
+    overflow: hidden;
+    margin: 12% auto;
+}
+
+.card img {
+    height: 400px;
+    width: 250px;
+}
+
+.card .card-content {
+    padding: 20px;
+}
+
+.card .card-content h1 {
+    font-family: "Fraunces", sans-serif;
+}
+
+.card .card-content h5 {
+    color: var(--dark-grayish-blue);
+    letter-spacing: 3px;
+}
+
+.card .card-content p {
+    color: var(--dark-grayish-blue);
+}
+
+.card .card-content .price-container {
+    display: flex;
+    gap: 15px;
+}
+
+.card .card-content .price-container h1 {
+    color: var(--dark-cyan);
+}
+
+.card .card-content .price-container p {
+    text-decoration: line-through;
+    margin: auto 0 auto 0;
+}
+
+.card .card-content button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--dark-cyan);
+    cursor: pointer;
+}
+
+.card .card-content button:hover {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #3a9573;
+    transition: 0.2s linear;
+    cursor: pointer;
+}
+
+.card .card-content button i {
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 375px) {
+    .card {
+        flex-direction: column;
+        height: max-content;
+        width: 70vw;
+        margin: 12% auto;
+    }
+
+    .card img {
+        height: 280px;
+        width: 70vw;
+    }
+}
