@@ -91,3 +91,17 @@ body {
 .card .card-content button i {
     margin-right: 10px;
 }
+
+@media only screen and (max-width: 375px) {
+    .card {
+        flex-direction: column;
+        height: max-content;
+        width: 70vw;
+        margin: 12% auto;
+    }
+
+    .card img {
+        height: 280px;
+        width: 70vw;
+    }
+}
