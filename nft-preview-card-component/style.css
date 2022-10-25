@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+}
+
+:root {
+    --soft-blue: #8bacda;
+    --cyan: #00fff7;
+    --very-dark-blue-main: #0d192b;
+    --very-dark-blue-card: #14253d;
+    --very-dark-blue-line: #2f415b;
+    --white: #ffffff; 
+}
+
+html {
+    background-color: var(--very-dark-blue-main);
+    font-size: 18px;
+    font-family: "Outfit", sans-serif;
+}
+
+.card {
+    background-color: var(--very-dark-blue-card);
+    width: 300px;
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 15vh auto;
+    box-shadow: 5px 5px 30px black;
+}
+
+.card-image {
+    position: relative;
+    width: 90%;
+    height: 270px;
+    margin: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 14px auto;
+}
+
+.card-image:hover {
+    cursor: pointer;
+}
+
+.overlay {
+    /* opacity: 0; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: rgba(0, 255, 247, 0.4);
+    transition: 0.4s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.overlay img {
+    margin: 40%;
+}
+
+.card-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card-content {
+    padding: 0 16px;
+}
+
+.card-content h4 {
+    color: var(--white);
+    transition: 0.4s;
+}
+
+.card-content h4:hover {
+    color: var(--cyan);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.card-content p {
+    color: var(--soft-blue);
+    font-size: 0.9rem;
+    padding-top: 16px;
+}
+
+.card-content .card-extra {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-content .card-extra p:nth-child(1) {
+    color: var(--cyan);
+    font-size: .8rem;
+}
+
+.card-content .card-extra p:nth-child(1)::before {
+    content: url("images/icon-ethereum.svg");
+    padding-right: 6px;
+    vertical-align: middle;
+}
+
+.card-content .card-extra p:nth-child(2) {
+    color: var(--soft-blue);
+    font-size: .8rem;
+}
+
+.card-content .card-extra p:nth-child(2)::before {
+    content: url("images/icon-clock.svg");
+    padding-right: 6px;
+    vertical-align: middle;
+}
+
+.divider {
+    margin: 12px 0;
+    background-color: #8bacda26;
+    height: 0.1px;
+}
+
+.card-footer {
+    display: flex;
+    gap: 15px;
+}
+
+.card-footer .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    border: 1px solid white;
+}
+
+.card-footer .avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-footer p {
+    padding: 0;
+    margin: auto 0;
+}
+
+.card-footer p span.username {
+    color: var(--white);
+    transition: 0.4s;
+}
+
+.card-footer p span.username:hover {
+    color: var(--cyan);
+    transition: 0.4s;
+    cursor: pointer;
+}
