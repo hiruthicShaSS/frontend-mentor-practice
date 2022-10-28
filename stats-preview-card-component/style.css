@@ -1,0 +1,120 @@
+:root {
+    --very-dark-blue: #090b1a;
+    --dark-desatured-blue: #1b1938;
+    --soft-violet: #aa5cdb;
+    --white: #fff;
+    --slightly-transparent: hsla(0, 0%, 100%, 0.75);
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    color: var(--white);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    line-height: 1.4;
+}
+
+.card {
+    background-color: var(--dark-desatured-blue);
+    display: flex;
+    width: 800px;
+    height: 350px;
+    border-radius: 7px;
+    overflow: hidden;
+    margin: 25vh auto;
+}
+
+.card .card-text-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .card-text-content h3 {
+    padding-bottom: 20px;
+}
+
+.card .card-text-content p {
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.card .image-container {
+    position: relative;
+}
+
+.card .image-container img {
+    width: 380px;
+    height: 366px;
+}
+
+.highlight {
+    color: var(--soft-violet);
+}
+
+.card h3 {
+    font-size: 1.8rem;
+}
+
+.card p {
+    color: var(--slightly-transparent-white);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat h4 {
+    font-size: 1.5rem;
+}
+
+.stat p {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+}
+
+.overlay {
+    background-color: var(--soft-violet);
+    width: 380px;
+    height: 366px;
+    position: absolute;
+    top: 0;
+    opacity: 0.6;
+    filter: contrast(150%) saturate(90%) brightness(80%);
+}
+
+@media only screen and (max-width: 375px) {
+    .card {
+        width: 95vw;
+        height: max-content;
+        flex-direction: column-reverse;
+        margin: 8vh auto;
+        text-align: center;
+    }
+
+    .card-text-content > * {
+        margin: 15px 0;
+    }
+
+    .card .card-text-content {
+        padding: 30px;
+    }
+
+    .stats {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .stats > * {
+        margin: 15px 0;
+    }
+}
