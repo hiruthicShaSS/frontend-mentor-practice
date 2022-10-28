@@ -6,3 +6,10 @@
 4. [NFT Preview Component](./nft-preview-card-component) - [Challenge](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U)
 5. [Stats Preview Card Component](./stats-preview-card-component) - [Challenge](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62)
 6. [Profile Card Component](./profile-card-component) - [Challenge](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ)
+
+
+| Implemtation | Challenge |
+|---|---|
+| Order Summary Component | [Challenge](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj) |
+|   |   |
+|   |   |
