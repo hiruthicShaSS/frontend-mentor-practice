@@ -92,7 +92,7 @@ body {
     filter: contrast(150%) saturate(90%) brightness(80%);
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 768px) {
     .card {
         width: 95vw;
         height: max-content;
