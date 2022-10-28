@@ -1,0 +1,85 @@
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+    font-size: 18px;
+    font-family: "kumbh Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: var(--dark-cyan);
+    /* background-image: url("images/bg-pattern-top.svg"); */
+    background-repeat: no-repeat no-repeat;
+    background-position: top left;
+}
+
+.card {
+    width: 350px;
+    height: 400px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 25vh auto;
+    overflow: hidden;
+}
+
+.card .upper {
+    background: url("images/bg-pattern-card.svg") no-repeat;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+
+.card .lower {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+
+span.age, .card .lower p {
+    color: var(--dark-gray);
+    font-weight: 400;
+}
+
+
+.self-intro {
+    flex: 3;
+    margin-top: -30px;
+}
+
+.self-intro > * {
+    margin-bottom: 10px;
+}
+
+.profile-image {
+    /* flex: 1; */
+    width: 96px;
+    height: 96px;
+    border-radius: 100px;
+    overflow: hidden;
+    border: 5px solid white;
+    position: relative;
+    bottom: 60px;
+    left: 35%;
+}
+
+.stats {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid hsla(227, 10%, 46%, 0.184);
+    padding: 20px 10px 0 10px;
+}
+
+.stat p {
+    font-size: 0.7rem;
+    letter-spacing: 1.2px;
+}
