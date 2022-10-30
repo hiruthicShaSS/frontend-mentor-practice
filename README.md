@@ -8,3 +8,4 @@
 | NFT Preview Component          | [./nft-preview-card-component](./nft-preview-card-component) | [Challenge](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U) |
 | Stats Preview Card Component   | [./stats-preview-card-component](./stats-preview-card-component) | [Challenge](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62) |
 | Profile Card Component         | [./profile-card-component](./profile-card-component) | [Challenge](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ) |
+| FAQ Accordion Card | [./faq-accordion-card](./faq-accordion-card) | [Challenge](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam) |
