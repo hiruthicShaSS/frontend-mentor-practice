@@ -1,0 +1,128 @@
+:root {
+    --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+    --gradient-soft-violet: hsl(273, 75%, 66%);
+    --gradient-soft-blue: hsl(240, 73%, 65%);
+    --text-very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --text-dark-grayish-blue: hsl(240, 6%, 50%);
+    --divider-light-grayish-blue: hsl(240, 5%, 91%);
+    font-size: 12px;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--gradient-soft-violet);
+    background-image: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.card {
+    width: 900px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
+    left: -120px;
+}
+
+img {
+    position: absolute;
+}
+
+#box {
+    position: absolute;
+    z-index: 2;
+    top: 180px;
+    left: 140px;
+}
+
+#shadow {
+    top: -365px;
+    right: -480px;
+}
+
+.faq-container {
+    width: 50%;
+}
+
+.faq-container h3 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+
+.faq {
+    border-bottom: 1px solid var(--divider-light-grayish-blue);
+    cursor: pointer;
+}
+
+.all-faq {
+list-style: none;
+}
+
+.faq:hover .faq-header {
+    color: var(--soft-red);
+}
+
+.faq-header {
+    font-size: 1.2rem;
+    color: var(--text-very-dark-grayish-blue);
+    padding: 12px 0;
+}
+
+.faq.active .faq-header {
+    font-weight: bold;
+    color: black;
+}
+
+.faq-header {
+    position: relative;
+}
+
+.faq-header::after {
+    content: url("images/icon-arrow-down.svg");
+    position: absolute;
+    right: 0;
+}
+
+.faq.active .faq-header::after {
+    transform: rotate(180deg);
+}
+
+.faq-body {
+    color: var(--text-dark-grayish-blue);
+    display: none;
+    margin-bottom: 10px;
+}
+
+.faq.active .faq-body {
+    display: block;
+    animation: slideDown 2s forwards;
+}
+
+@keyframes slideDown {
+    100% { down: 0 }
+}
+
+@media only screen and (max-width: 375px) {
+    .card {
+        flex-direction: column;
+    }
+    
+}
