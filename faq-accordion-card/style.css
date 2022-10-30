@@ -70,6 +70,7 @@ img {
 .faq {
     border-bottom: 1px solid var(--divider-light-grayish-blue);
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .all-faq {
