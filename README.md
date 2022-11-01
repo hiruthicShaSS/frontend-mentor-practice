@@ -9,3 +9,4 @@
 | Stats Preview Card Component   | [./stats-preview-card-component](./stats-preview-card-component) | [Challenge](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62) |
 | Profile Card Component         | [./profile-card-component](./profile-card-component) | [Challenge](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ) |
 | FAQ Accordion Card | [./faq-accordion-card](./faq-accordion-card) | [Challenge](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam) |
+| Notification Page | [./notifications-page](./notifications-page) | [Challenge](https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC) |
