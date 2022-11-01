@@ -22,7 +22,7 @@ body {
 }
 
 .card {
-    width: 500px;
+    width: 510px;
     height: 620px;
     background-color: var(--White);
     border-radius: 10px;
@@ -30,14 +30,14 @@ body {
     margin: 5vh auto;
 }
 
-.header {
+header {
     display: flex;
     justify-content: space-between;
     padding: 0 12px;
     margin-bottom: 20px;
 }
 
-.header h4 {
+header h4 {
     font-size: 0.7rem;
     color: var(--Grayish-blue);
     font-weight: 500;
@@ -45,11 +45,11 @@ body {
     cursor: pointer;
 }
 
-.header h4:hover {
+header h4:hover {
     color: var(--blue);
 }
 
-.header h3 {
+header h3 {
     line-height: 1rem;
 }
 

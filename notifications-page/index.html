@@ -9,19 +9,17 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Notifications page</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/fonts/PlusJakartaSans-VariableFont_wght.ttf">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="card">
-    <div class="header">
+    <header>
       <h3>Notifications <span id="unread-count">3</span></h3>
       <h4 id="mark-all-as-read">Mark all as read</h4>
-    </div>
-    <div class="notifications">
+    </header>
+    <main class="notifications">
       <div class="notification new">
         <img class="profile" src="assets/images/avatar-mark-webber.webp" alt="Mark profile image">
         <div class="notification-content">
@@ -92,7 +90,7 @@
           <p>2 weeks ago</p>
         </div>
       </div>
-    </div>
+    </main>
   </div>
 
   <script>
