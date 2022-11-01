@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+}
+
+:root {
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue: hsl(210, 60%, 98);
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+    font-size: 18px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+    background-color: var(--Light-grayish-blue-1);
+    max-height: 100vh;
+}
+
+.card {
+    width: 500px;
+    height: 620px;
+    background-color: var(--White);
+    border-radius: 10px;
+    padding: 20px 8px;
+    margin: 5vh auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+    margin-bottom: 20px;
+}
+
+.header h4 {
+    font-size: 0.7rem;
+    color: var(--Grayish-blue);
+    font-weight: 500;
+    line-height: 0.7rem;
+    cursor: pointer;
+}
+
+.header h4:hover {
+    color: var(--blue);
+}
+
+.header h3 {
+    line-height: 1rem;
+}
+
+span#unread-count {
+    font-size: 0.8rem;
+    color: var(--White);
+    background-color: var(--blue);
+    padding: 0 8px;
+    margin: 0 6px;
+    border-radius: 5px;
+}
+
+.notification {
+    display: flex;
+    gap: 10px;
+    margin: 6px 10px;
+    color: var(--Grayish-blue);
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 0.7rem;
+    transition: background-color 1.5s ease;
+}
+
+.notification.new {
+    background-color: var(--Light-grayish-blue-1);
+}
+
+.notification.message {
+    flex-direction: column;
+}
+
+.notification.notification.commented-on-post .notification-content {
+    flex: 1;
+}
+
+.notification.commented-on-post .notification-post-image img {
+    flex: 2;
+    cursor: pointer;
+}
+
+.notification-message-content {
+    display: flex;
+    gap: 10px;
+}
+
+.message-content {
+    border: 1px solid var(--Light-grayish-blue-2);
+    padding: 14px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.message-content:hover {
+    background-color: var(--Light-grayish-blue-1);
+}
+
+.notification img.profile {
+    width: 8%;
+    height: 8%;
+    margin: auto 0;
+}
+
+.username {
+    padding-right: 2px;
+}
+
+.post-reaction,
+.group-joined {
+    padding-left: 2px;
+}
+
+.notification-content {
+    line-height: 1rem;
+
+}
+
+.notification-content .username {
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.notification-content .username:hover {
+    color: var(--blue);
+}
+
+.notification-content .post-reaction {
+    color: var(--Dark-grayish-blue);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.notification-content .post-reaction:hover {
+    color: var(--blue);
+}
+
+.notification-content .group-joined {
+    color: var(--blue);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.notification-content p {
+    margin: 2px 0 3px 4px;
+}
+
+.notification p.content {
+    display: inline;
+    margin: 0 4px;
+}
+
+.notification.new .notification-content span.new {
+    background-color: var(--red);
+    width: 6px;
+    height: 6px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.notification-post-image img {
+    width: 40px;
+    height: auto;
+}
+
+@media only screen and (max-width: 500px) {
+    .card {
+        width: 100vw;
+        height: max-content;
+        margin: 0;
+    }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Notifications page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="card">
+    <div class="header">
+      <h3>Notifications <span id="unread-count">3</span></h3>
+      <h4 id="mark-all-as-read">Mark all as read</h4>
+    </div>
+    <div class="notifications">
+      <div class="notification new">
+        <img class="profile" src="assets/images/avatar-mark-webber.webp" alt="Mark profile image">
+        <div class="notification-content">
+          <p class="content"><span class="username">Mark Webber</span> reacted to your recent post <span
+              class="post-reaction">My first
+              tournament today!</span></p>
+          <span class="new"></span>
+          <p>1m ago</p>
+        </div>
+      </div>
+      <div class="notification new">
+        <img class="profile" src="assets/images/avatar-angela-gray.webp" alt="Angela profile image">
+        <div class="notification-content">
+          <p class="content"><span class="username">Angela Gray</span> followed you</p>
+          <span class="new"></span>
+          <p>5min ago</p>
+        </div>
+      </div>
+      <div class="notification new">
+        <img class="profile" src="assets/images/avatar-jacob-thompson.webp" alt="Jacob profile image">
+        <div class="notification-content">
+          <p class="content"><span class="username">Jacob Thompson</span> has joined your group <span
+              class="group-joined">Chess Club</span></p>
+          <span class="new"></span>
+          <p>1 day ago</p>
+        </div>
+      </div>
+      <div class="notification message">
+        <div class="notification-message-content">
+          <img class="profile" src="assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky profile image">
+          <div class="notification-content">
+            <p class="content"><span class="username">Rizky Hasanudin</span> sent you a private message</p>
+            <span class="new"></span>
+            <p>5 day ago</p>
+          </div>
+        </div>
+        <div class="message-content">
+          Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having
+          lots of fun and improving my game.
+        </div>
+      </div>
+      <div class="notification commented-on-post">
+        <img class="profile" src="assets/images/avatar-kimberly-smith.webp" alt="Kimberly profile image">
+        <div class="notification-content">
+          <p class="content"><span class="username">Kimberly Smith</span> commented on your picture</p>
+          <span class="new"></span>
+          <p>1 week ago</p>
+        </div>
+        <div class="notification-post-image">
+          <img src="assets/images/image-chess.webp" alt="Chess girl">
+        </div>
+      </div>
+      <div class="notification">
+        <img class="profile" src="assets/images/avatar-nathan-peterson.webp" alt="Nathan profile image">
+        <div class="notification-content">
+          <p class="content"><span class="username">Nathan Peterson</span> reacted to your recent post <span
+              class="post-reaction">5 end-game strategies to increase your win rate</span></p>
+          <span class="new"></span>
+          <p>2 weeks ago</p>
+        </div>
+      </div>
+      <div class="notification">
+        <img class="profile" src="assets/images/avatar-anna-kim.webp" alt="Anna profile image">
+        <div class="notification-content">
+          <p class="content"><span class="username">Anna Kim</span> left the group <span class="group-joined">Chess
+              Club</span></p>
+          <span class="new"></span>
+          <p>2 weeks ago</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const unreadNotification = Array.from(document.querySelectorAll(".notification.new"));
+
+    document.getElementById("unread-count").innerText = unreadNotification.length;
+
+    document.getElementById("mark-all-as-read").addEventListener("click", (e) => {
+      const newNotifications = Array.from(document.querySelectorAll(".notification.new"));
+
+      for (let i = 0; i < newNotifications.length; i++) {
+        newNotifications[i].classList.toggle("new");
+      }
+
+      document.getElementById("unread-count").style.display = "none";
+    });
+  </script>
+</body>
+
+</html>
