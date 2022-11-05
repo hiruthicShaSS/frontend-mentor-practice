@@ -10,3 +10,4 @@
 | Profile Card Component         | [./profile-card-component](./profile-card-component) | [Challenge](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ) |
 | FAQ Accordion Card | [./faq-accordion-card](./faq-accordion-card) | [Challenge](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam) |
 | Notification Page | [./notifications-page](./notifications-page) | [Challenge](https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC) |
+| Order Summary | [./order_summary](./order_summary) | [Challenge](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj) |
