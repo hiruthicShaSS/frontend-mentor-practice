@@ -11,3 +11,4 @@
 | FAQ Accordion Card | [./faq-accordion-card](./faq-accordion-card) | [Challenge](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam) |
 | Notification Page | [./notifications-page](./notifications-page) | [Challenge](https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC) |
 | Social Proof Section | [./social-proof-section](./social-proof-section) | [Challenge](https://www.frontendmentor.io/challenges/social-proof-section-6e0qTv_bA) |
+| Four Card Feature Section | [./four-card-feature-section](./four-card-feature-section) | [Challenge](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK) |

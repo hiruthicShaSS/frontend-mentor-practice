@@ -1,0 +1,131 @@
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    text-align: center;
+}
+
+main h6 {
+    color: var(--Grayish-Blue);
+    font-size: 2.4rem;
+    font-weight: 200;
+}
+
+main h4 {
+    color: var(--Very-Dark-Blue);
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+main p {
+    margin: 20px auto;
+    color: var(--Grayish-Blue);
+    width: 40%;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.inner-cards {
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+.card {
+    width: 350px;
+    height: 250px;
+    -webkit-box-shadow: 18px 35px 54px -15px rgba(222, 230, 241, 1);
+    -moz-box-shadow: 18px 35px 54px -15px rgba(222, 230, 241, 1);
+    box-shadow: 18px 35px 54px -15px rgba(222, 230, 241, 1);
+    border-radius: 8px;
+    padding: 30px;
+    position: relative;
+}
+
+.card h4 {
+    color: var(--Very-Dark-Blue);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: var(--Grayish-Blue);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.card img {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+.b-cyan {
+    border-top: 4px solid var(--Cyan);
+}
+
+.b-red {
+    border-top: 4px solid var(--Red);
+}
+
+.b-orange {
+    border-top: 4px solid var(--Orange);
+}
+
+.b-blue {
+    border-top: 4px solid var(--Blue);
+}
+
+@media only screen and (max-width: 1100px) {
+    .inner-cards {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    main {
+        margin: 80px 20px;
+    }
+
+    main p {
+        width: 100%;
+        padding: 0 60px;
+        font-size: 1.1rem;
+    }
+
+    main h6 {
+        color: var(--Grayish-Blue);
+        font-size: 2.2rem;
+        font-weight: 200;
+    }
+
+    main h4 {
+        color: var(--Very-Dark-Blue);
+        font-size: 2.2rem;
+        font-weight: 600;
+    }
+}
