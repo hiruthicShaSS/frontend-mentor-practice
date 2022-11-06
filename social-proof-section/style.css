@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px dotted red; */
 }
 
 :root {
@@ -18,24 +20,28 @@ body {
     background-color: var(--White);
     background-image: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
     background-repeat: no-repeat no-repeat;
-    background-position: top 0 left -120px, top 80px left 200px;
+    background-position: top 0 left 14px, top 300px right -10px;
 }
 
 section.top {
     display: flex;
-    padding: 80px 80px 20px 80px;
+    margin: 6% 20% 6% 20%;
+    justify-content: space-between;
 }
 
 main {
-    width: 30vw;
+    width: 20vw;
 }
 
 main h1 {
-    font-size: 2.3rem;
+    font-size: 3.0rem;
+    margin-bottom: 20px;
 }
 
 main p {
     color: var(--Dark-Grayish-Magenta);
+    font-size: 1.2rem;
+    line-height: 1.4;
 }
 
 .ratings ul {
@@ -46,16 +52,151 @@ main p {
     display: inline;
 }
 
+.rate:nth-child(2) {
+    margin-left: 50px;
+}
+
+.rate:nth-child(3) {
+    margin-left: 90px;
+}
+
 .rate {
+    width: 340px;
+    height: fit-content;
     display: flex;
     gap: 20px;
     background-color: var(--Light-Grayish-Magenta);
     border-radius: 6px;
-    padding: 10px 5px;
+    padding: 10px 20px;
     margin: 10px;
+    align-items: center;
+
 }
 
 .rate p {
     font-size: 0.9rem;
     font-weight: 700;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    margin: 6% 10%;
+}
+
+.review-card {
+    background-color: var(--Very-Dark-Magenta);
+    color: var(--White);
+    padding: 30px;
+    border-radius: 10px;
+    width: 310px;
+    height: fit-content;
+    line-height: 1.4;
+    font-size: 1.2rem;
+    margin: 15px;
+}
+
+.review-card:nth-child(2) {
+    margin-top: 40px;
+}
+
+.review-card:nth-child(3) {
+    margin-top: 80px;
+}
+
+.review-card .self-intro {
+    display: flex;
+    gap: 25px;
+    padding: 0 10px 20px 0;
+    height: fit-content;
+    align-items: center;
+}
+
+.review-card .self-intro img {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+}
+
+.review-card .self-intro p.username {
+    color: var(--White);
+    font-weight: 500;
+
+}
+
+.review-card .self-intro p {
+    color: var(--Soft-Pink);
+    font-weight: 500;
+}
+
+.review-card .review::before,
+.review::after {
+    content: " \" ";
+}
+
+@media only screen and (max-width: 1350px) {
+    section.top, .bottom {
+        margin: 6% 10%;
+    }
+
+    main {
+        width: 30vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+
+    main {
+        width: 35vw;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        background-image: url("images/bg-pattern-top-mobile.svg");
+        background-size: 96vw;
+        background-position: top 0 left 14px;
+    }
+
+    section.top {
+        margin-top: 100px;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    main {
+        width: fit-content;
+    }
+
+    .rate {
+        width: 80vw;
+        flex-direction: column;
+        margin: 10px 0px;
+    }
+
+    .rate:nth-child(2) {
+        margin: 10px 0px;
+    }
+
+    .rate:nth-child(3) {
+        margin: 10px 0px;
+    }
+
+    .bottom {
+        flex-direction: column;
+    }
+
+    .review-card {
+        width: 80vw;
+        margin: 10px 0;
+    }
+
+    .review-card:nth-child(2) {
+        margin-top: 0;
+    }
+
+    .review-card:nth-child(3) {
+        margin-top: 0;
+    }
 }
