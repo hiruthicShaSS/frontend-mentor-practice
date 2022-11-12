@@ -2,13 +2,14 @@
 
 | Task | Live Page | Challenge |
 |---|---|---|
-| Order Summary Component        | [./order_summary](./order_summary) | [Challenge](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj) |
+| Order Summary Component        | [./order_summary](./order_summary) | [Challenge](https://www.frontendmentor.io/solutions/order-summary-component-ZVUj86Aaan) |
 | Product Preview Card Component | [./product-preview-card-component](./product-preview-card-component) | [Challenge](https://www.frontendmentor.io/solutions/product-preview-card-component-UytDN6E0Lg) |
-| Interactive Rating Component   | [./interactive-rating-component](./interactive-rating-component) | [Challenge](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI) |
-| NFT Preview Component          | [./nft-preview-card-component](./nft-preview-card-component) | [Challenge](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U) |
-| Stats Preview Card Component   | [./stats-preview-card-component](./stats-preview-card-component) | [Challenge](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62) |
-| Profile Card Component         | [./profile-card-component](./profile-card-component) | [Challenge](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ) |
-| FAQ Accordion Card | [./faq-accordion-card](./faq-accordion-card) | [Challenge](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam) |
-| Notification Page | [./notifications-page](./notifications-page) | [Challenge](https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC) |
-| Social Proof Section | [./social-proof-section](./social-proof-section) | [Challenge](https://www.frontendmentor.io/challenges/social-proof-section-6e0qTv_bA) |
-| Four Card Feature Section | [./four-card-feature-section](./four-card-feature-section) | [Challenge](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK) |
+| Interactive Rating Component   | [./interactive-rating-component](./interactive-rating-component) | [Challenge](https://www.frontendmentor.io/solutions/interactive-rating-component-XbSAQL2Jpd) |
+| NFT Preview Component          | [./nft-preview-card-component](./nft-preview-card-component) | [Challenge](https://www.frontendmentor.io/solutions/nft-preview-card-component-ZtBUiPowHY) |
+| Stats Preview Card Component   | [./stats-preview-card-component](./stats-preview-card-component) | [Challenge](https://www.frontendmentor.io/solutions/stats-preview-card-component-9gJdlPBs_A) |
+| Profile Card Component         | [./profile-card-component](./profile-card-component) | [Challenge](https://www.frontendmentor.io/solutions/profile-card-component-v1RMEtRYzA) |
+| FAQ Accordion Card | [./faq-accordion-card](./faq-accordion-card) | [Challenge](https://www.frontendmentor.io/solutions/faq-accordion-card-kIrgOi8Qxd) |
+| Notification Page | [./notifications-page](./notifications-page) | [Challenge](https://www.frontendmentor.io/solutions/notification-page-qTwdgiDVt2) |
+| Social Proof Section | [./social-proof-section](./social-proof-section) | [Challenge](https://www.frontendmentor.io/solutions/social-proof-section-LgnYVnKLB4) |
+| Four Card Feature Section | [./four-card-feature-section](./four-card-feature-section) | [Challenge](https://www.frontendmentor.io/solutions/four-card-feature-section-bMWg6_JftK) |
+| Tip Calculator App | [./tip-calculator-app](./tip-calculator-app) | [Challenge](https://www.frontendmentor.io/solutions/tip-calulator-app-VL62Y1M6g4) |
