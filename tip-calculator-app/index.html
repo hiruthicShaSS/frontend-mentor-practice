@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h4>SPLI</h4>
+    <h4>TTER</h4>
+  </header>
+
+  <main class="card">
+    <div class="control-div">
+      <p>Bill</p>
+      <input type="number" name="amount" id="amount" placeholder="0" min="0">
+      <p>Select Tip %</p>
+      <div class="tips-container">
+        <div class="tip">5%</div>
+        <div class="tip">10%</div>
+        <div class="tip">15%</div>
+        <div class="tip">25%</div>
+        <div class="tip">50%</div>
+        <div class="tip">Custom</div>
+      </div>
+      <p>Number of People</p>
+      <input type="number" name="no-of-people" id="no-of-people" placeholder="0" min="0">
+    </div>
+    <div class="output-div">
+      <div class="calculator">
+        <div class="calculator-output">
+          <p>
+            Tip Amount
+            <span>/ person</span>
+          </p>
+          <h1 id="output-tip" data-placeholder="$0.00"></h1>
+        </div>
+        <br>
+        <br>
+        <div class="calculator-output">
+          <p>
+            Total
+            <span>/ person</span>
+          </p>
+          <h1 id="output-total" data-placeholder="$0.00"></h1>
+        </div>
+      </div>
+      <button class="btn-reset">RESET</button>
+    </div>
+  </main>
+
+  <script>
+    const tip = document.getElementById("output-tip");
+    const total = document.getElementById("output-total");
+    const resetButton = document.getElementsByClassName("btn-reset")[0];
+    const tips = Array.from(document.getElementsByClassName("tip"));
+
+    const reset = () => {
+      tip.innerText = tip.dataset.placeholder;
+      total.innerText = total.dataset.placeholder;
+    };
+    reset();
+
+    const getSelectedTip = () => {
+      let tip;
+
+      try {
+        tip = document.querySelector(".tip.active").innerText.replace("%", "");
+      } catch (_) {
+        return 0;
+      }
+
+      return parseFloat(tip);
+    }
+
+
+    const updateTotal = () => {
+      let amount = document.getElementById("amount").value;
+      let noOfPeople = document.getElementById("no-of-people").value;
+
+      amount = amount == NaN ? 0 : parseFloat(amount);
+      noOfPeople = noOfPeople == NaN ? 1 : parseFloat(noOfPeople);
+
+      if (!amount || !noOfPeople) {
+        resetButton.classList.remove("active");
+        return reset();
+      }
+
+      const calculatedSplit = amount / noOfPeople;
+      const calculatedTip = calculatedSplit * (getSelectedTip() / 100);
+
+      total.innerText = `$${(calculatedSplit + calculatedTip).toFixed(2)}`;
+      tip.innerText = `$${(calculatedTip).toFixed(2)}`;
+
+      resetButton.classList.add("active");
+    }
+
+
+    document.getElementById("amount").addEventListener("input", updateTotal);
+    document.getElementById("no-of-people").addEventListener("input", updateTotal);
+
+    resetButton.addEventListener("click", (_) => {
+      document.getElementById("amount").value = "";
+      document.getElementById("no-of-people").value = "";
+      resetButton.classList.remove("active");
+      document.querySelector(".tip.active").classList.toggle("active");
+      reset();
+    });
+
+
+
+    for (let i = 0; i < tips.length; i++) {
+      tips[i].addEventListener("click", (e) => {
+        tips[i].classList.toggle("active");
+
+        const activeTips = Array.from(document.querySelectorAll(".tip.active"));
+
+        if (activeTips.length > 1) {
+          for (let j = 0; j < activeTips.length; j++) {
+            if (activeTips[j] != tips[i]) {
+              activeTips[j].classList.toggle("active");
+            }
+          }
+
+          return updateTotal();
+        }
+
+        updateTotal();
+      })
+    }
+  </script>
+</body>
+
+</html>
