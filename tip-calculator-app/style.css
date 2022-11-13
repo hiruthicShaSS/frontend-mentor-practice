@@ -159,6 +159,7 @@ input#no-of-people:focus {
     opacity: 0.2;
     border: none;
     font-size: 0.7rem;
+    transition: 0.4s;
 }
 
 .btn-reset.active {
@@ -168,6 +169,26 @@ input#no-of-people:focus {
 
 .btn-reset.active:hover {
     background-color: var(--Strong-cyan-2);
+}
+
+.fade-out {
+    animation: fadeOut 0.4s;
+}
+
+.fade-in {
+    animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @media only screen and (max-width: 500px) {

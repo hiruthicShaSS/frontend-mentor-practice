@@ -83,7 +83,15 @@
       return parseFloat(tip);
     }
 
+    const animate = (el) => {
+      el.classList.toggle("fade-in");
+      setTimeout(() => {
+        el.classList.toggle("fade-in");
+      }, 400);
+    }
 
+    let lastTip = 0;
+    let lastTotal = 0;
     const updateTotal = () => {
       let amount = document.getElementById("amount").value;
       let noOfPeople = document.getElementById("no-of-people").value;
@@ -98,9 +106,21 @@
 
       const calculatedSplit = amount / noOfPeople;
       const calculatedTip = calculatedSplit * (getSelectedTip() / 100);
+      const calculatedTotal = calculatedSplit + calculatedTip;
 
-      total.innerText = `$${(calculatedSplit + calculatedTip).toFixed(2)}`;
+      if (lastTip.toFixed(2) != calculatedTip.toFixed(2)) {
+        animate(tip);
+        lastTip = calculatedTip;
+      }
+      if (lastTotal.toFixed(2) != calculatedTotal.toFixed(2)) {
+        animate(total);
+        lastTotal = calculatedTotal;
+      }
+
+
+      total.innerText = `$${calculatedTotal.toFixed(2)}`;
       tip.innerText = `$${(calculatedTip).toFixed(2)}`;
+
 
       resetButton.classList.add("active");
     }
