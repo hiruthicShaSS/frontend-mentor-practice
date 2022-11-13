@@ -48,6 +48,7 @@ body {
 
 .card .image-container {
     position: relative;
+    width: fit-content;
 }
 
 .card .image-container img {
@@ -83,10 +84,10 @@ body {
 }
 
 .overlay {
+    position: absolute;
     background-color: var(--soft-violet);
     width: 380px;
     height: 366px;
-    position: absolute;
     top: 0;
     opacity: 0.6;
     filter: contrast(150%) saturate(90%) brightness(80%);
@@ -94,7 +95,7 @@ body {
 
 @media only screen and (max-width: 768px) {
     .card {
-        width: 95vw;
+        width: min-content;
         height: max-content;
         flex-direction: column-reverse;
         margin: 8vh auto;
