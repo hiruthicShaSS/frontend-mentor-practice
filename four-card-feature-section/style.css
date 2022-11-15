@@ -10,53 +10,100 @@
     font-family: "Poppins", sans-serif;
 }
 
-* {
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-main {
-    text-align: center;
+* {
+    margin: 0;
 }
 
-main h6 {
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+header {
+    text-align: center;
+    margin: 80px 0;
+}
+
+header h6 {
     color: var(--Grayish-Blue);
     font-size: 2.4rem;
     font-weight: 200;
 }
 
-main h4 {
+header h4 {
     color: var(--Very-Dark-Blue);
     font-size: 2.4rem;
     font-weight: 600;
 }
 
-main p {
+header p {
     margin: 20px auto;
     color: var(--Grayish-Blue);
-    width: 40%;
+    width: min(70vw, 500px);
+}
+
+main {
+    display: grid;
+    place-content: center;
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-}
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    grid-template-areas:
+        "supervisor team calculator"
+        "supervisor karma calculator";
+    place-content: center;
 
-.inner-cards {
-    margin-bottom: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 25px;
 }
 
 .card {
-    width: 350px;
+    min-width: 20rem;
+    max-width: 25rem;
     height: 250px;
     -webkit-box-shadow: 18px 35px 54px -15px rgba(222, 230, 241, 1);
     -moz-box-shadow: 18px 35px 54px -15px rgba(222, 230, 241, 1);
@@ -64,6 +111,7 @@ main p {
     border-radius: 8px;
     padding: 30px;
     position: relative;
+    animation: reveal 0.6s;
 }
 
 .card h4 {
@@ -84,48 +132,75 @@ main p {
     bottom: 30px;
 }
 
-.b-cyan {
+.card-supervisor {
     border-top: 4px solid var(--Cyan);
+    grid-area: supervisor;
+    align-self: center;
 }
 
-.b-red {
+.card-team {
     border-top: 4px solid var(--Red);
+    grid-area: team;
+
 }
 
-.b-orange {
+.card-karma {
     border-top: 4px solid var(--Orange);
+    grid-area: karma;
 }
 
-.b-blue {
+.card-calculator {
     border-top: 4px solid var(--Blue);
+    grid-area: calculator;
+    align-self: center;
 }
 
-@media only screen and (max-width: 1100px) {
-    .inner-cards {
-        flex-direction: row;
+@media only screen and (max-width: 58.125rem) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "supervisor team"
+            "karma calculator";
+        animation: reveal 0.6s;
     }
 }
 
-@media only screen and (min-width: 375px) {
-    main {
-        margin: 80px 20px;
+@media only screen and (max-width: 38.1875rem) {
+    .cards {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "supervisor"
+            "team"
+            "karma"
+            "calculator";
     }
 
-    main p {
-        width: 100%;
-        padding: 0 60px;
-        font-size: 1.1rem;
+    .card {
+        animation: reveal-up 0.6s;
+    }
+}
+
+@keyframes reveal {
+    from {
+        transform: scale(90%);
+        opacity: 0;
     }
 
-    main h6 {
-        color: var(--Grayish-Blue);
-        font-size: 2.2rem;
-        font-weight: 200;
+    to {
+        transform: scale(100%);
+        opacity: 1;
+    }
+}
+
+@keyframes reveal-up {
+    from {
+        transform: scale(90%) translateY(5rem);
+        opacity: 0;
     }
 
-    main h4 {
-        color: var(--Very-Dark-Blue);
-        font-size: 2.2rem;
-        font-weight: 600;
+    to {
+        transform: scale(100%) translateY(0);
+        opacity: 1;
     }
 }
