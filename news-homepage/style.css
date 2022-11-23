@@ -1,0 +1,361 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+:root {
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    padding: 0 20vw
+}
+
+body {
+    max-height: 92vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+
+header li {
+    display: inline;
+    color: var(--Dark-grayish-blue);
+    padding: 0 15px;
+    transition: 0.4s;
+}
+
+header li:hover {
+    cursor: pointer;
+    color: var(--Soft-orange);
+    transition: 0.4s;
+}
+
+.ham-menu {
+    cursor: pointer;
+    display: none;
+}
+
+.ham-menu .ham-bar {
+    width: 65px;
+    height: 6px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.2s;
+}
+
+.ham-menu:hover .ham-bar {
+    background-color: var(--Soft-orange);
+    transition: 0.5s;
+}
+
+.ham-menu-close {
+    position: absolute;
+    right: 0;
+    padding: 40px;
+}
+
+.ham-menu-close .ham-bar {
+    width: 45px;
+    height: 4px;
+}
+
+.ham-menu-close .ham-bar:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.ham-menu-close .ham-bar:nth-child(2) {
+    transform: rotate(-45deg) translate(15%, -125%);
+}
+
+.mobile-nav {
+    position: fixed;
+    right: -50vw;
+    bottom: 0;
+    background-color: white;
+    width: 50vw;
+    height: 100vh;
+    z-index: 1;
+    animation: navClose 1s;
+}
+
+.mobile-nav ul {
+    margin-top: 20rem;
+}
+
+header .mobile-nav li {
+    display: block;
+    color: var(--Dark-grayish-blue);
+    padding: 0 15px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 25px 10px;
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+        "main    main new"
+        "heading info new";
+    gap: 2.5rem;
+    margin-top: 50px;
+}
+
+main img {
+    grid-area: main;
+}
+
+main h1 {
+    grid-area: heading;
+    font-size: 3.2rem;
+    font-weight: 800;
+}
+
+main .description {
+    grid-area: info;
+    color: var(--Dark-grayish-blue);
+    position: relative;
+}
+
+main .description button {
+    width: 180px;
+    height: 45px;
+    background-color: var(--Soft-red);
+    color: white;
+    font-weight: 700;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+    position: absolute;
+    bottom: 0;
+}
+
+main .description button:hover {
+    background-color: var(--Very-dark-blue);
+    transition: 0.3s;
+}
+
+main .more-news {
+    grid-area: new;
+    width: max(18vw, 100%);
+    background-color: var(--Very-dark-blue);
+    color: white;
+}
+
+main .more-news h2 {
+    color: var(--Soft-orange);
+    font-size: 2.2rem;
+    padding: 30px;
+}
+
+main .more-news .news {
+    margin: 25px;
+    padding: 10px 0 25px 0;
+}
+
+main .more-news .news:not(:last-child) {
+    border-bottom: 1px solid var(--Dark-grayish-blue);
+}
+
+main .more-news .news h3 {
+    padding-bottom: 10px;
+    transition: 0.3s;
+}
+
+main .more-news .news h3:hover {
+    color: var(--Soft-orange);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+main .more-news .news p {
+    color: var(--Grayish-blue);
+}
+
+section.other-news {
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+section.other-news .news {
+    display: flex;
+    gap: 1.2rem;
+    width: 400px;
+}
+
+section.other-news .news img {
+    width: 100px;
+    height: 130px;
+}
+
+section.other-news .news h2 {
+    color: var(--Grayish-blue);
+    font-size: 2.1rem;
+}
+
+
+section.other-news .news h3 {
+    font-weight: 800;
+    padding-bottom: 10px;
+    transition: 0.3s;
+}
+
+section.other-news .news h3:hover {
+    color: var(--Soft-red);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section.other-news .news p {
+    color: var(--Dark-grayish-blue);
+}
+
+
+
+@media only screen and (max-width: 1440px) {
+    main {
+        display: grid;
+        grid-template-areas:
+            "main"
+            "heading"
+            "info"
+            "new";
+        gap: 2.5rem;
+    }
+
+    main .more-news .news-container {
+        display: flex;
+    }
+
+    main .more-news .news {
+        flex: 1;
+        margin: 0 25px;
+    }
+
+    section.other-news .news {
+        display: flex;
+        gap: 1.2rem;
+        width: inherit;
+    }
+
+    main .more-news .news:not(:last-child) {
+        border-bottom: none;
+    }
+
+    main .description button {
+        position: inherit;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 1040px) {
+    nav ul {
+        display: none;
+    }
+
+    main .more-news .news-container {
+        flex-direction: column;
+    }
+
+    .ham-menu {
+        display: block;
+    }
+
+    .mobile-nav.open {
+        display: block;
+        right: 0;
+        -webkit-box-shadow: 10px 10px 300px 200px rgba(0, 0, 0, 0.72);
+        -moz-box-shadow: 10px 10px 300px 200px rgba(0, 0, 0, 0.72);
+        box-shadow: 10px 10px 300px 200px rgba(0, 0, 0, 0.72);
+        animation: navOpen 1s;
+    }
+}
+
+@keyframes navOpen {
+    from {
+        right: -50vw;
+        box-shadow: none;
+    }
+
+    to {
+        right: 0;
+        -webkit-box-shadow: 10px 10px 300px 200px rgba(0, 0, 0, 0.72);
+        -moz-box-shadow: 10px 10px 300px 200px rgba(0, 0, 0, 0.72);
+        box-shadow: 10px 10px 300px 200px rgba(0, 0, 0, 0.72);
+    }
+}
+
+@keyframes navClose {
+    from {
+        right: 0;
+        -webkit-box-shadow: 10px 10px 300px 200px rgba(0, 0, 0, 0.72);
+        -moz-box-shadow: 10px 10px 300px 200px rgba(0, 0, 0, 0.72);
+        box-shadow: 10px 10px 300px 200px rgba(0, 0, 0, 0.72);
+    }
+
+    to {
+        right: -50vw;
+        box-shadow: none;
+    }
+}
