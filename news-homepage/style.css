@@ -111,11 +111,13 @@ header li:hover {
 .ham-menu-close {
     position: absolute;
     right: 0;
+    margin-top: 40px;
     padding: 40px;
+    animation: rotate 1s;
 }
 
 .ham-menu-close .ham-bar {
-    width: 45px;
+    width: 25px;
     height: 4px;
 }
 
@@ -124,15 +126,15 @@ header li:hover {
 }
 
 .ham-menu-close .ham-bar:nth-child(2) {
-    transform: rotate(-45deg) translate(15%, -125%);
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .mobile-nav {
     position: fixed;
-    right: -50vw;
+    right: -65vw;
     bottom: 0;
     background-color: white;
-    width: 50vw;
+    width: 65vw;
     height: 100vh;
     z-index: 1;
     animation: navClose 1s;
@@ -140,6 +142,12 @@ header li:hover {
 
 .mobile-nav ul {
     margin-top: 20rem;
+}
+
+.mobile-nav li:hover {
+    cursor: pointer;
+    color: var(--Soft-orange);
+    transition: 0.4s;
 }
 
 header .mobile-nav li {
@@ -272,8 +280,6 @@ section.other-news .news p {
     color: var(--Dark-grayish-blue);
 }
 
-
-
 @media only screen and (max-width: 1440px) {
     main {
         display: grid;
@@ -323,6 +329,17 @@ section.other-news .news p {
         display: block;
     }
 
+    .ham-menu .ham-bar {
+        width: 35px;
+        height: 4px;
+        transition: 0.3s;
+    }
+
+    .ham-menu:hover .ham-bar {
+        width: 40px;
+        transition: 0.3s;
+    }
+
     .mobile-nav.open {
         display: block;
         right: 0;
@@ -335,7 +352,7 @@ section.other-news .news p {
 
 @keyframes navOpen {
     from {
-        right: -50vw;
+        right: -65vw;
         box-shadow: none;
     }
 
@@ -356,7 +373,7 @@ section.other-news .news p {
     }
 
     to {
-        right: -50vw;
+        right: -65vw;
         box-shadow: none;
     }
 }
