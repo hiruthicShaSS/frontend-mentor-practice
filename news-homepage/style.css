@@ -62,11 +62,12 @@ h6 {
 }
 
 .container {
-    padding: 0 20vw
+    padding: 0 15vw
 }
 
 body {
     max-height: 92vh;
+    background-color: var(--Off-white);
 }
 
 header {
