@@ -14,3 +14,4 @@
 | Four Card Feature Section | [./four-card-feature-section](./four-card-feature-section) | [Challenge](https://www.frontendmentor.io/solutions/four-card-feature-section-bMWg6_JftK) |
 | Tip Calculator App | [./tip-calculator-app](./tip-calculator-app) | [Challenge](https://www.frontendmentor.io/solutions/tip-calulator-app-VL62Y1M6g4) |
 | News Homepage | [./news-homepage](./news-homepage) | [Challenge](https://www.frontendmentor.io/solutions/news-homepage-SenUCUJuXD) |
+| Time tracking dashboard | [./time-tracking-dashboard](./time-tracking-dashboard) | [Challenge](https://www.frontendmentor.io/solutions/time-tracking-dashboard-yabgXlCYtM) |

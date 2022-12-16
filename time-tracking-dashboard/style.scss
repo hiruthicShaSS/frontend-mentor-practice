@@ -1,0 +1,300 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+}
+html,
+body {
+	height: 100%;
+}
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+#root,
+#__next {
+	isolation: isolate;
+}
+
+$Blue: hsl(246, 80%, 60%);
+$Light-red-work: hsl(15, 100%, 70%);
+$Soft-blue-play: hsl(195, 74%, 62%);
+$Light-red-study: hsl(348, 100%, 68%);
+$Lime-green-exercise: hsl(145, 58%, 55%);
+$Violet-social: hsl(264, 64%, 52%);
+$Soft-orange-self-care: hsl(43, 84%, 65%);
+$Very-dark-blue: hsl(226, 43%, 10%);
+$Dark-blue: hsl(235, 46%, 20%);
+$Desaturated-blue: hsl(235, 45%, 61%);
+$Pale-Blue: hsl(236, 100%, 87%);
+
+$border-radius: 15px;
+
+:root {
+	font-size: 18px;
+	font-family: "Rubik", sans-serif;
+}
+
+body {
+	background-color: $Very-dark-blue;
+	color: $Pale-Blue;
+}
+
+main {
+	height: 100%;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	grid-template-areas:
+		"user work     play   study"
+		"user exercise social self_care";
+	gap: 20px;
+}
+
+.user {
+	grid-area: user;
+
+	width: 200px;
+	height: fit-content;
+	background-color: $Dark-blue;
+	border-radius: 15px;
+	overflow: hidden;
+
+	.about {
+		background-color: $Blue;
+		padding: 25px 20px;
+		border-radius: 15px;
+		margin: 0 0 30px 0;
+
+		img {
+			border-radius: 100%;
+			border: 3px solid white;
+			width: 80px;
+			height: 80px;
+			margin-bottom: 40px;
+		}
+
+		p {
+			color: $Pale-Blue;
+			font-size: 0.8rem;
+		}
+
+		.name {
+			color: white;
+			font-size: 2.1rem;
+			font-weight: 100;
+			line-height: 1.2;
+			padding-bottom: 1.8rem;
+		}
+	}
+	.filters {
+		margin: 20px 0;
+
+		ol {
+			list-style: none;
+			padding: 0 0 0 30px;
+
+			li {
+				margin: 15px 0;
+
+				a {
+					text-decoration: none;
+					color: unset;
+
+					&:hover {
+						color: white;
+					}
+				}
+
+				&.active {
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+.activity {
+	position: relative;
+	width: 200px;
+	height: 230px;
+	border-radius: 15px;
+	overflow: hidden;
+	cursor: pointer;
+
+	.activity-data {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding: 20px;
+		background-color: $Dark-blue;
+		border-radius: $border-radius;
+		transition: background 0.4s ease;
+
+		.activity-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.activity-name {
+				color: white;
+				font-weight: 500;
+			}
+
+			svg:hover {
+				path {
+					fill: white;
+				}
+			}
+		}
+
+		.activity-body {
+			margin: 10px 0;
+
+			.time-spent {
+				font-size: 3rem;
+				font-weight: 300;
+				color: white;
+			}
+
+			.last-week-time-spent {
+				font-size: 0.8rem;
+
+				&::before {
+					content: "Last Week - ";
+				}
+			}
+		}
+
+		&:hover {
+			background-color: $Desaturated-blue;
+			transition: background 0.4s ease;
+		}
+	}
+}
+
+#work {
+	grid-area: work;
+	background: $Light-red-work url("images/icon-work.svg") 90% -8% no-repeat;
+}
+#play {
+	grid-area: play;
+	background: $Soft-blue-play url("images/icon-play.svg") 90% -8% no-repeat;
+}
+#study {
+	grid-area: study;
+	background: $Light-red-study url("images/icon-study.svg") 90% -8% no-repeat;
+}
+#exercise {
+	grid-area: exercise;
+	background: $Lime-green-exercise url("images/icon-exercise.svg") 90% 0
+		no-repeat;
+}
+#social {
+	grid-area: social;
+	background: $Violet-social url("images/icon-social.svg") 90% -12% no-repeat;
+}
+#self-care {
+	grid-area: self_care;
+	background: $Soft-orange-self-care url("images/icon-self-care.svg") 90% -8% no-repeat;
+}
+
+@media only screen and (max-width: 930px) {
+	main {
+		grid-template-areas:
+			"user work   play"
+			"user study  exercise"
+			"user social self_care";
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	main {
+		height: unset;
+		grid-template-areas:
+			"user"
+			"work"
+			"play"
+			"study"
+			"exercise"
+			"social"
+			"self_care";
+	}
+
+	.activity {
+		width: 80vw;
+		height: 210px;
+
+		.activity-body {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	.user {
+		width: 80vw;
+
+		.about {
+			display: flex;
+			align-content: center;
+			align-items: center;
+			gap: 30px;
+
+			img {
+				border-radius: 100%;
+				border: 3px solid white;
+				width: 80px;
+				height: 80px;
+				margin-bottom: unset;
+			}
+
+			p {
+				color: $Pale-Blue;
+				font-size: 0.8rem;
+			}
+
+			.name {
+				color: white;
+				font-size: 2.1rem;
+				font-weight: 100;
+				line-height: 1.2;
+				padding-bottom: unset;
+			}
+		}
+
+		.filters {
+			ol {
+				display: flex;
+				justify-content: space-around;
+			}
+		}
+	}
+}

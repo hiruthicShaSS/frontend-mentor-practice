@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Time tracking dashboard</title>
+
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<main>
+			<div class="user">
+				<div class="about">
+					<img src="images/image-jeremy.png" alt="Jeremy Robson" />
+					<div>
+						<p>Report for</p>
+						<p class="name">Jeremy Robson</p>
+					</div>
+				</div>
+				<div class="filters">
+					<ol>
+						<li data-filter="daily"><a href="#!">Daily</a></li>
+						<li data-filter="weekly" class="active"><a href="#!">Weekly</a></li>
+						<li data-filter="monthly"><a href="#!">Monthly</a></li>
+					</ol>
+				</div>
+			</div>
+			<div class="activity" id="work">
+				<div class="activity-data">
+					<div class="activity-header">
+						<p class="activity-name">Work</p>
+						<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+								fill="#BBC0FF"
+								fill-rule="evenodd"
+							/>
+						</svg>
+					</div>
+					<div class="activity-body">
+						<p class="time-spent">32hrs</p>
+						<p class="last-week-time-spent">36hrs</p>
+					</div>
+				</div>
+			</div>
+			<div class="activity" id="play">
+				<div class="activity-data">
+					<div class="activity-header">
+						<p class="activity-name">Play</p>
+						<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+								fill="#BBC0FF"
+								fill-rule="evenodd"
+							/>
+						</svg>
+					</div>
+					<div class="activity-body">
+						<p class="time-spent">10hrs</p>
+						<p class="last-week-time-spent">8hrs</p>
+					</div>
+				</div>
+			</div>
+			<div class="activity" id="study">
+				<div class="activity-data">
+					<div class="activity-header">
+						<p class="activity-name">Study</p>
+						<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+								fill="#BBC0FF"
+								fill-rule="evenodd"
+							/>
+						</svg>
+					</div>
+					<div class="activity-body">
+						<p class="time-spent">4hrs</p>
+						<p class="last-week-time-spent">7hrs</p>
+					</div>
+				</div>
+			</div>
+			<div class="activity" id="exercise">
+				<div class="activity-data">
+					<div class="activity-header">
+						<p class="activity-name">Exercise</p>
+						<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+								fill="#BBC0FF"
+								fill-rule="evenodd"
+							/>
+						</svg>
+					</div>
+					<div class="activity-body">
+						<p class="time-spent">4hrs</p>
+						<p class="last-week-time-spent">5hrs</p>
+					</div>
+				</div>
+			</div>
+			<div class="activity" id="social">
+				<div class="activity-data">
+					<div class="activity-header">
+						<p class="activity-name">Social</p>
+						<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+								fill="#BBC0FF"
+								fill-rule="evenodd"
+							/>
+						</svg>
+					</div>
+					<div class="activity-body">
+						<p class="time-spent">5hrs</p>
+						<p class="last-week-time-spent">10hrs</p>
+					</div>
+				</div>
+			</div>
+			<div class="activity" id="self-care">
+				<div class="activity-data">
+					<div class="activity-header">
+						<p class="activity-name">Self Care</p>
+						<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+								fill="#BBC0FF"
+								fill-rule="evenodd"
+							/>
+						</svg>
+					</div>
+					<div class="activity-body">
+						<p class="time-spent">2hrs</p>
+						<p class="last-week-time-spent">2hrs</p>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,255 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: hsl(226deg, 43%, 10%);
+  color: hsl(236deg, 100%, 87%);
+}
+
+main {
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-areas: "user work     play   study" "user exercise social self_care";
+  gap: 20px;
+}
+
+.user {
+  grid-area: user;
+  width: 200px;
+  height: fit-content;
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 15px;
+  overflow: hidden;
+}
+.user .about {
+  background-color: hsl(246deg, 80%, 60%);
+  padding: 25px 20px;
+  border-radius: 15px;
+  margin: 0 0 30px 0;
+}
+.user .about img {
+  border-radius: 100%;
+  border: 3px solid white;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 40px;
+}
+.user .about p {
+  color: hsl(236deg, 100%, 87%);
+  font-size: 0.8rem;
+}
+.user .about .name {
+  color: white;
+  font-size: 2.1rem;
+  font-weight: 100;
+  line-height: 1.2;
+  padding-bottom: 1.8rem;
+}
+.user .filters {
+  margin: 20px 0;
+}
+.user .filters ol {
+  list-style: none;
+  padding: 0 0 0 30px;
+}
+.user .filters ol li {
+  margin: 15px 0;
+}
+.user .filters ol li a {
+  text-decoration: none;
+  color: unset;
+}
+.user .filters ol li a:hover {
+  color: white;
+}
+.user .filters ol li.active {
+  color: white;
+}
+
+.activity {
+  position: relative;
+  width: 200px;
+  height: 230px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.activity .activity-data {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 15px;
+  transition: background 0.4s ease;
+}
+.activity .activity-data .activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.activity .activity-data .activity-header .activity-name {
+  color: white;
+  font-weight: 500;
+}
+.activity .activity-data .activity-header svg:hover path {
+  fill: white;
+}
+.activity .activity-data .activity-body {
+  margin: 10px 0;
+}
+.activity .activity-data .activity-body .time-spent {
+  font-size: 3rem;
+  font-weight: 300;
+  color: white;
+}
+.activity .activity-data .activity-body .last-week-time-spent {
+  font-size: 0.8rem;
+}
+.activity .activity-data .activity-body .last-week-time-spent::before {
+  content: "Last Week - ";
+}
+.activity .activity-data:hover {
+  background-color: hsl(235deg, 45%, 61%);
+  transition: background 0.4s ease;
+}
+
+#work {
+  grid-area: work;
+  background: hsl(15deg, 100%, 70%) url("images/icon-work.svg") 90% -8% no-repeat;
+}
+
+#play {
+  grid-area: play;
+  background: hsl(195deg, 74%, 62%) url("images/icon-play.svg") 90% -8% no-repeat;
+}
+
+#study {
+  grid-area: study;
+  background: hsl(348deg, 100%, 68%) url("images/icon-study.svg") 90% -8% no-repeat;
+}
+
+#exercise {
+  grid-area: exercise;
+  background: hsl(145deg, 58%, 55%) url("images/icon-exercise.svg") 90% 0 no-repeat;
+}
+
+#social {
+  grid-area: social;
+  background: hsl(264deg, 64%, 52%) url("images/icon-social.svg") 90% -12% no-repeat;
+}
+
+#self-care {
+  grid-area: self_care;
+  background: hsl(43deg, 84%, 65%) url("images/icon-self-care.svg") 90% -8% no-repeat;
+}
+
+@media only screen and (max-width: 930px) {
+  main {
+    grid-template-areas: "user work   play" "user study  exercise" "user social self_care";
+  }
+}
+@media only screen and (max-width: 700px) {
+  main {
+    height: unset;
+    grid-template-areas: "user" "work" "play" "study" "exercise" "social" "self_care";
+  }
+  .activity {
+    width: 80vw;
+    height: 210px;
+  }
+  .activity .activity-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .user {
+    width: 80vw;
+  }
+  .user .about {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .user .about img {
+    border-radius: 100%;
+    border: 3px solid white;
+    width: 80px;
+    height: 80px;
+    margin-bottom: unset;
+  }
+  .user .about p {
+    color: hsl(236deg, 100%, 87%);
+    font-size: 0.8rem;
+  }
+  .user .about .name {
+    color: white;
+    font-size: 2.1rem;
+    font-weight: 100;
+    line-height: 1.2;
+    padding-bottom: unset;
+  }
+  .user .filters ol {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
